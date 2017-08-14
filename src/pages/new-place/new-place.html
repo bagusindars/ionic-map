@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tambah Tempat/Lokasi</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+   <ion-grid>
+  <form (ngSubmit)="onAddPlace(f.value)" #f="ngForm">
+    <ion-item>
+      <ion-label>Nama Tempat</ion-label>
+      <ion-input type="text" name="title" ngModel required></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block class="btn" [disabled]="!f.valid">Tambah Tempat</button>
+  </form>
+ 
+    <ion-row>
+      <ion-col><button ion-button block (click)="onLocateUser()">Deteksi</button></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
